@@ -26,5 +26,7 @@ m_Log.Init("LogPath", "MyLog", 1, "firstLogName", "second", "third");
 
 m_Log.Write((int)Log.first, "Log Message");
 
+m_Log.Write((int)Log.third, "333 log");
+
 // Close
 m_Log.Close();
