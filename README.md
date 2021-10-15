@@ -5,6 +5,7 @@ use log4net
  **** Download log4net from Nugget.
  
 using shLog;
+
 public enum Log
 
 {
