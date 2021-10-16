@@ -44,6 +44,7 @@ namespace shLog
 
         #endregion Member
 
+
         #region Method
         /// <summary>
         /// Init
@@ -70,11 +71,11 @@ namespace shLog
 
             for (int i = 0; i < args.Length; i++)
             {
-                if (args[i] is string log)
-                {
-                    m_ListLogName.Add(log);
-                }
+                if (args[i] is string)
+                    m_ListLogName.Add(args[i] as string);
+            
             }
+
             m_ArrLog = new ILog[m_ListLogName.Count];
 
             m_bThared = true;
@@ -218,7 +219,5 @@ namespace shLog
             }
         }
         #endregion Method
-
     }
-
 }
