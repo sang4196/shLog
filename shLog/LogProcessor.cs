@@ -54,7 +54,7 @@ namespace shLog
         /// <param name="_nPeriod">보관 주기 storage period day</param>
         /// <param name="args">로그 이름들 Logs name</param>
         /// <returns></returns>
-        public bool Init(string _sLogPath, string _sSystemName, int _nPeriod, params object[] args)
+        public bool Init(string _sLogPath, string _sSystemName, int _nPeriod, params string[] args)
         {
             if (m_IsInited == true)
                 return false;
@@ -71,9 +71,7 @@ namespace shLog
 
             for (int i = 0; i < args.Length; i++)
             {
-                if (args[i] is string)
-                    m_ListLogName.Add(args[i] as string);
-            
+                m_ListLogName.Add(args[i]);
             }
 
             m_ArrLog = new ILog[m_ListLogName.Count];
