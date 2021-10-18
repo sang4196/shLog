@@ -15,16 +15,13 @@ namespace shLog
             RollingFileAppender roller = new RollingFileAppender();
             roller.LockingModel = new log4net.Appender.FileAppender.MinimalLock();
             roller.AppendToFile = true;
-            roller.RollingStyle = RollingFileAppender.RollingMode.Date;// 날짜 별로
+            roller.RollingStyle = RollingFileAppender.RollingMode.Date;
             roller.StaticLogFileName = false;
-            roller.MaxSizeRollBackups = 3;  // 저장기간 지정  ==> 테스트 해봐야함 ==> 삭제 되지 않음   //
 
             roller.Name = _LogName;
-            //roller.MaximumFileSize        = "15000KB"; //최대 사이즈는 지정하지 않는게 좋겠지 혹은 테스트 해야함
-            roller.DatePattern = String.Format("yyyy-MM-dd\\\\'{0}'_yyyyMMdd_HH'.Log'", _LogName);
             roller.DatePattern = $"yyyy-MM-dd\\\\HH\\\\'{_LogName}.Log'";
             roller.Layout = new log4net.Layout.PatternLayout();
-            roller.File = _Path; // + "%DatePattern";
+            roller.File = _Path;
 
             PatternLayout patternLayout = new PatternLayout();
             patternLayout.ConversionPattern = "%message%newline";
