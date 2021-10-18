@@ -13,8 +13,6 @@ namespace shLog
     {
         #region Member
 
-        private static int m_RefCount = 0;
-
         private static readonly object m_InstanceLock = new object();
         
         private static bool m_IsInited = false;
