@@ -20,7 +20,7 @@ public enum Log
  
 LogProcessor m_Log = new LogProcessor();
 
-m_Log.Init("LogPath", "MyLog", 1, System.Enum.GetNames( typeof( Log ) ););
+m_Log.Init("LogPath", "MyLog", 1, System.Enum.GetNames( typeof( Log ) ));
 
 // Write Log
 
