@@ -9,7 +9,7 @@ using System.IO;
 
 namespace shLog
 {
-    public class LogProcessor
+    public class LogManager
     {
         #region Member
 
@@ -27,12 +27,12 @@ namespace shLog
         private Thread m_ThreadMain = null;
         private bool m_bThared = false;
 
-        public LogProcessor()
+        public LogManager()
         {
         }
 
         //--------------------------------------------------------------------------------
-        ~LogProcessor()
+        ~LogManager()
         {
         }
 

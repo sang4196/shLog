@@ -11,7 +11,7 @@ namespace shLog
     {
         public static ILog GetDyamicLogger(string _LogName, string _Path)
         {
-            Hierarchy hierarchy = (Hierarchy)LogManager.GetRepository();
+            Hierarchy hierarchy = (Hierarchy)log4net.LogManager.GetRepository();
             RollingFileAppender roller = new RollingFileAppender();
             roller.LockingModel = new log4net.Appender.FileAppender.MinimalLock();
             roller.AppendToFile = true;
